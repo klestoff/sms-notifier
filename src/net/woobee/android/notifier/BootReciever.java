@@ -13,6 +13,4 @@ public class BootReciever extends BroadcastReceiver {
 		if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED))
 			Log.v(this.getClass().getName(), "rrrra phone number: " + Utils.getPhoneNumber(context));
 	}
-	
-
 }

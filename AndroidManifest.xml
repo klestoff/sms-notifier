@@ -14,12 +14,12 @@
         		<category android:name="android.intent.category.LAUNCHER" />
         	</intent-filter>
         </activity>
-    </application>
-    
-    <receiver android:name="net.woobee.android.notifier.BootReciever">
-        <intent-filter>
-            <action android:name="android.intent.action.BOOT_COMPLETED" />
-            <category android:name="android.intent.category.HOME" />
-        </intent-filter>
-    </receiver>
+        
+	    <receiver android:name="BootReciever">
+	        <intent-filter>
+	            <action android:name="android.intent.action.BOOT_COMPLETED" />
+	            <category android:name="android.intent.category.HOME" />
+	        </intent-filter>
+	    </receiver>
+    </application>    
 </manifest>
