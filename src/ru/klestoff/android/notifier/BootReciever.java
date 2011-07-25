@@ -20,11 +20,12 @@
  * THE SOFTWARE.
  */
 
-package net.woobee.android.notifier;
+package ru.klestoff.android.notifier;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.telephony.SmsManager;
 import android.util.Log;
 
 /**
@@ -33,9 +34,20 @@ import android.util.Log;
 public class BootReciever extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		Log.v(this.getClass().getName(), "rrrra ction: "  + intent.getAction());
-		
-		if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED))
-			Log.v(this.getClass().getName(), "rrrra phone number: " + Utils.getPhoneNumber(context));
+		if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+			Log.v(
+				getClass().getName(), 
+				"phone number: " + Utils.getPhoneNumber(context)
+			);
+
+/*			SmsManager.getDefault().sendTextMessage(
+				"", 
+				null, 
+				"Master, my new number is " + Utils.getPhoneNumber(context), 
+				null, 
+				null
+			);
+*/
+		}
 	}
 }

@@ -20,8 +20,9 @@
  * THE SOFTWARE.
  */
 
-package net.woobee.android.notifier;
+package ru.klestoff.android.notifier;
 
+import net.woobee.android.notifier.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;

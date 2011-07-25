@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package net.woobee.android.notifier;
+package ru.klestoff.android.notifier;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;

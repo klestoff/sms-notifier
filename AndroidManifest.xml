@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!-- 
  Copyright (C) 2011 by Alexander A. Klestov <alan@klestoff.ru>
  
@@ -17,12 +18,10 @@
  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
+  THE SOFTWARE.
  -->
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="net.woobee.android.notifier"
-      android:versionCode="1" android:versionName="0.1">
+<manifest package="net.woobee.android.notifier"
+      android:versionCode="1" android:versionName="0.1" xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="7" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.SEND_SMS"/>
@@ -36,7 +35,7 @@
         	</intent-filter>
         </activity>
         
-	    <receiver android:name="BootReciever">
+	    <receiver android:name=".BootReciever">
 	        <intent-filter>
 	            <action android:name="android.intent.action.BOOT_COMPLETED" />
 	            <category android:name="android.intent.category.HOME" />
